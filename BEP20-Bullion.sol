@@ -336,7 +336,7 @@ contract Ownable is Context {
   }
 }
 
-contract BEP20Standard is Context, IBEP20, Ownable {
+contract BULLION is Context, IBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -349,10 +349,10 @@ contract BEP20Standard is Context, IBEP20, Ownable {
   string private _name;
 
   constructor() public {
-    _name = "BEP20 Standard";
-    _symbol = "BEST";
-    _decimals = 8;
-    _totalSupply = 10000000000000; // 100 thousand
+    _name = "BULLION";
+    _symbol = "BUL";
+    _decimals = 18;
+    _totalSupply = 1000000000000000000000000000; // 1 billion
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
